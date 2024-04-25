@@ -65,6 +65,7 @@
   .toptab {
     flex-direction: column;
     padding: 0 10px;
+    align-items: flex-start;
   }
   .title2 {
     width: 100%;
