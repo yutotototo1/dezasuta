@@ -112,14 +112,15 @@ body {
 .img1 {
   border-bottom-right-radius: 81px;
   margin-bottom: 64px;
+  width: 500px;
 }
 .voice {
   padding-left: 84px;
   flex-direction: column;
 }
 .img2 {
-  text-align: none;
   margin-bottom: 65px;
+  width: 272px;
 }
 
 .p4 {
@@ -140,18 +141,29 @@ body {
 .dfs {
   display: flex;
   justify-content: space-between;
-  h2 {
-    font-size: 38px;
-    color: #d30202;
-    margin: -15px 0 0 10px;
-  }
+}
+.dfsimg {
+  width: 100%;
+}
+
+.dfsblock {
+  width: 30%;
+}
+
+h3 {
+  font-size: 38px;
+  color: #d30202;
+  margin: -15px 0 0 10px;
 }
 
 .dfsimg {
   border-top-right-radius: 41px;
 }
 
-/* 
-メニューが動かない
-3枚の画像が両サイドピッタリまで広がらない
-テキストの余白が取れない */
+h2.midashi {
+  text-align: center;
+  font-size: 151px;
+}
+.img3 {
+  width: 151px;
+}
