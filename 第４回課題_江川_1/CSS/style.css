@@ -80,6 +80,7 @@ body {
   box-sizing: border-box;
 }
 
+/* ハッピーに溢れる */
 .almost {
   margin: 0 auto;
   max-width: 1000px;
@@ -283,6 +284,10 @@ h2.accesstitle {
   right: 230px;
 }
 
+/* Q,ページトップへのバナーがPC,SP版ともにすごく邪魔な位置にある気がするのですが、
+こんなものなのでしょうか？
+一応デザインカンプから数字を追い出してきたのですが、、 */
+
 /* 以下スマホ版メニュー */
 
 .sp_nav,
@@ -375,4 +380,40 @@ h2.accesstitle {
   }
 
   /* ここまで1100pxメディアクエリ */
+}
+
+/* ここから767pxメディアクエリ */
+
+@media screen and (max-width: 767px) {
+  /* ページトップバナー */
+  .pagetop {
+    width: 100px;
+    position: fixed;
+    bottom: 205px;
+    right: 13px;
+  }
+  /* ハッピーに溢れる */
+
+  .poem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .p1 {
+    font-size: 17px;
+    margin: 100px auto 78px auto;
+  }
+  .p2 {
+    font-size: 38px;
+    line-height: 1.17;
+  }
+  .p3 {
+    font-size: 16px;
+    margin-top: 53px;
+    margin-right: 22px;
+    margin-left: 22px;
+    margin-bottom: 104px;
+    line-height: 1.65;
+  }
+  /* 改行うまくいかないところから */
 }
