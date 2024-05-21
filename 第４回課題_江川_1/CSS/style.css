@@ -138,6 +138,7 @@ body {
   text-align: justify;
 }
 
+/* メニュー */
 .dfs {
   display: flex;
   justify-content: space-between;
@@ -160,10 +161,218 @@ h3 {
   border-top-right-radius: 41px;
 }
 
-h2.midashi {
+h2.menu {
   text-align: center;
-  font-size: 151px;
+  padding-bottom: 50px;
 }
-.img3 {
+.midashimenu {
   width: 151px;
+}
+
+/* ギャラリー */
+h2.gallery {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 28px;
+}
+.midashigallery {
+  width: 245px;
+}
+.gallerypicture {
+  width: 384px;
+}
+
+.galleryblock {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 72px;
+}
+
+/* イベント */
+h2.eventtitle {
+  text-align: center;
+  padding-bottom: 42px;
+}
+
+.midashiimg {
+  width: 173px;
+}
+
+.eventbox {
+  width: 1000px;
+  height: 200px;
+  background-color: white;
+  border: 4px solid #4f260b;
+  font-size: 23px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+.event {
+  display: flex;
+  padding-left: 163px;
+}
+.eventinfo {
+  border-bottom: 2px solid #4f260b;
+}
+
+.eventday {
+  padding-right: 55px;
+}
+
+/* アクセス */
+/* Q.マップの幅がどうあがいても100%表示になりません…
+それらしくはできましたが、合っていますでしょうか？ */
+.access {
+  /* max-width: none;
+  width: 100%; */
+  margin: 0 calc(50% - 50vw);
+}
+h2.accesstitle {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 42px;
+}
+
+.accessmap {
+  /* display: flex; */
+  margin: 0 auto;
+}
+.iframe {
+  width: 1920px;
+}
+
+/* フッダー */
+.fooderback {
+  background-color: white;
+  margin: -3px calc(50% - 50vw);
+}
+.fooder {
+  /* margin-top: 82px; */
+  display: flex;
+  margin: 0 auto;
+  width: 1000px;
+}
+.fodderimg {
+  margin-top: 82px;
+  width: 226px;
+}
+.fodderinfo {
+  margin-top: 85px;
+  margin-left: 70px;
+  text-align: start;
+  font-size: 20px;
+  line-height: 1.95em;
+}
+.fodderinfo p {
+  line-height: 1.95em;
+}
+
+.copyright {
+  margin-top: 83px;
+  padding-bottom: 80px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ページトップ */
+.pagetop {
+  width: 125px;
+  position: fixed;
+  bottom: 230px;
+  right: 230px;
+}
+
+/* 以下スマホ版メニュー */
+
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .pc_nav {
+    display: none;
+  }
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    /* 重なり具合の調節１＜２ */
+    z-index: 2;
+  }
+
+  .sp_btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: relative;
+    top: 10px;
+
+    /* ボタンの変化 */
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+
+  /* ばつ印 */
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  /* ばつ印 */
+
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    /* 重なりの調節 */
+    z-index: 1;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .sp_nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
+      "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+      "MS PGothic", sans-serif;
+    font-size: 18px;
+  }
+
+  /* ここまで1100pxメディアクエリ */
 }
