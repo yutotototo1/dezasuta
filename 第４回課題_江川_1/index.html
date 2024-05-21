@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designcafe</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
 
     <div class="header_slider">
         <div>
-            <img src=".//images/pc_first-100.jpg" alt="店内の様子">
+
+            <picture>
+                <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                <img src=".//images/pc_first-100.jpg" alt="店内の様子">
+            </picture>
+
         </div>
 
         <div class="header_wrap">
-            <h1 class="header_logo">
-                <img src="./images/design_cafe_logo_header@2x.png" alt="design cafe">
-            </h1>
-
-            <max class="pc_nav">
+            <div id="pagetop">
+                <h1 class="header_logo">
+                    <img src="./images/design_cafe_logo_header@2x.png" alt="design cafe">
+                </h1>
+            </div>
+            <nav class="pc_nav">
                 <ul>
                     <li><a href="#">ABOUT US</a> </li>
                     <li><a href="#">MENU</a> </li>
@@ -29,7 +36,26 @@
                     <li><a href="#">ACCESS</a> </li>
 
                 </ul>
-            </max>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+
+            <nav class="sp_nav">
+
+                <ul>
+                    <li><a href="#">ABOUT US</a> </li>
+                    <li><a href="#">MENU</a> </li>
+                    <li><a href="#">GALLERY</a> </li>
+                    <li><a href="#">EVENT</a> </li>
+                    <li><a href="#">ACCESS</a> </li>
+
+                </ul>
+            </nav>
+
+
+
+
         </div>
     </div>
 
@@ -43,6 +69,7 @@
         </div>
 
 
+        <!-- アバウト -->
         <div class="aboutus">
             <h2>
                 <img class="img1" src="./images/pc_about-100.jpg" alt=" aboutus">
@@ -62,9 +89,11 @@
             </div>
         </div>
 
+
+        <!-- メニュー -->
         <section>
-            <h2 cl>
-                <img class="img3" src="./images/menu@2x.png" alt="menu">
+            <h2 class="menu">
+                <img class="midashimenu" src="./images/menu@2x.png" alt="menu">
             </h2>
 
 
@@ -88,7 +117,105 @@
 
         </section>
 
+
+        <!-- ギャラリー -->
+        <section>
+            <h2 class="gallery">
+                <img class="midashigallery" src="./images/gallery@2x.png" alt="gallery">
+            </h2>
+
+            <section class="galleryblock">
+                <img class="gallerypicture" src="./images/pc_gallary_01-100.jpg" alt="picture1">
+                <img class="gallerypicture" src="./images/pc_gallary_02-100.jpg" alt="picture2">
+                <img class="gallerypicture" src="./images/pc_gallary_03-100.jpg" alt="picture3">
+                <img class="gallerypicture" src="./images/pc_gallary_04-100.jpg" alt="picture4">
+                <img class="gallerypicture" src="./images/pc_gallary_05-100.jpg" alt="picture5">
+
+            </section>
+
+        </section>
+
+        <!-- イベント -->
+
+        <section>
+            <h2 class="eventtitle">
+                <img class="midashiimg" src="./images/event@2x.png" alt="event">
+            </h2>
+
+
+            <div class="eventbox">
+                <section class="event">
+                    <p class="eventday">2020,06,23</p>
+                    <p class="eventinfo">７月はイベント出展のため0/0お休みします</p>
+                </section>
+                <section class="event">
+                    <p class="eventday">2020,03,15</p>
+                    <p class="eventinfo">春の新商品新発売、話題のあのブランドとコラボ</p>
+                </section>
+                <section class="event">
+                    <p class="eventday">2020,02,06</p>
+                    <p class="eventinfo">コーヒーの日で30%OFFイベントを開催［3日間限定］</p>
+                </section>
+            </div>
+
+
+
+
+        </section>
+
+
+
+        <!-- アクセス -->
+
+        <section class="access">
+            <h2 class="accesstitle">
+                <img class="midashiimg" src="./images/access@2x.png" alt="accsess">
+            </h2>
+
+            <div class="accessmap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3328615393325!2d133.76919017506188!3d34.5957435888384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355156479638dad5%3A0x11ce694116eb0dbe!2z5YCJ5pW3576O6Kaz5Zyw5Yy6!5e0!3m2!1sja!2sjp!4v1716133303315!5m2!1sja!2sjp"
+                    width="1920" height="471" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+
+
+        <!-- フッダー -->
+        <section class="fooderback">
+            <div class="fooder">
+                <div class="fodderleft">
+                    <img class="fodderimg" src="./images/design_cafe_logo_footer@2x.png" alt="designcafe">
+                </div>
+                <div class="fodderinfo">
+
+                    <p>OPEN 18:00 / CLOSE 24:00</p>
+                    <p>〒150-0022</p>
+                    <p>東京都渋谷区東京南123デザインビルB1</p>
+                    <p>MAIL：info@designcafe.tokyo</p>
+
+                </div>
+            </div>
+            <p class="copyright">© 2021 DESIGN CAFE</p>
+        </section>
     </div>
+    <a href="#pagetop"><img class="pagetop" src="./images/to_top@2x.png" alt="pagetop">
+    </a>
+
+
+
+
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
+
+    </script>
 </body>
 
 
