@@ -288,10 +288,6 @@ h2.accesstitle {
   right: 230px;
 }
 
-/* Q,ページトップへのバナーがPC,SP版ともにすごく邪魔な位置にある気がするのですが、
-こんなものなのでしょうか？
-一応デザインカンプから数字を追い出してきたのですが、、 */
-
 /* 以下スマホ版メニュー */
 
 .sp_nav,
@@ -418,14 +414,6 @@ h2.accesstitle {
   }
   /* 改行うまくいかない。。 */
 
-  /* アバウト */
-  /* .aboutus {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-   width: 100%; 
-  } */
-
   .voice {
     padding-left: initial;
   }
@@ -444,6 +432,7 @@ h2.accesstitle {
   .img2 {
     display: flex;
     margin: 0 auto;
+    width: 160px;
   }
 
   .p4 {
@@ -539,27 +528,31 @@ h2.accesstitle {
   }
 
   .eventbox {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: 200px;
     background-color: white;
     border: 4px solid #4f260b;
-    font-size: 23px;
+    font-size: 16px;
     display: flex;
     flex-flow: column;
   }
 
-  /*次回 イベントボックス内の整理から
-   */
   .event {
     display: flex;
-    padding-left: 163px;
+    flex-flow: column;
+    justify-content: left;
+  }
+  .event {
+    padding-left: 33px;
   }
   .eventinfo {
-    border-bottom: 2px solid #4f260b;
-  }
-
-  .eventday {
-    padding-right: 55px;
+    display: inline-block;
+    /* 下線の長さが変わりません
+    文末の３点リーダーも表示されません… */
+    border-bottom: 1px solid #4f260b;
+    padding-top: 5px;
+    text-overflow: ellipsis;
   }
 
   /* アクセス */
@@ -571,12 +564,15 @@ h2.accesstitle {
   h2.accesstitle {
     text-align: center;
     padding-top: 80px;
-    padding-bottom: 42px;
+    padding-bottom: 5px;
   }
 
   .accessmap {
     /* display: flex; */
     margin: 0 auto;
+  }
+  .accessmap iframe {
+    height: 190px;
   }
 
   /* フッダー */
@@ -591,24 +587,31 @@ h2.accesstitle {
     justify-content: center;
   }
   .fodderimg {
-    margin-top: 82px;
+    margin-top: 50px;
+    margin-left: 20px;
     width: 226px;
   }
   .fodderinfo {
-    margin-top: 85px;
-    margin-left: 70px;
-    text-align: start;
-    font-size: 20px;
-    line-height: 1.95em;
+    margin-top: 36px;
+    margin-left: 20px;
+    font-size: 18px;
   }
   .fodderinfo p {
-    line-height: 1.95em;
+    line-height: 1.72em;
   }
 
   .copyright {
-    margin-top: 83px;
+    margin-top: 50px;
     padding-bottom: 80px;
     text-align: center;
     font-size: 16px;
+  }
+
+  /* ページトップ */
+  .pagetop {
+    width: 100px;
+    position: fixed;
+    bottom: 205px;
+    right: 12px;
   }
 }
